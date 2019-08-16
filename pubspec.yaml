@@ -1,6 +1,6 @@
 name: single_base
-description: Platform-agnostic bloc and storage interfaces for dart.
-version: 1.0.0
+description: Platform agnostic bloc and storage interfaces for dart.
+version: 1.0.0+1
 author: Modestas Valauskas <valauskasmodestas+dartpub@gmail.com>
 homepage: https://github.com/modulovalue/single_base
 repository: https://github.com/modulovalue/single_base
