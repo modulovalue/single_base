@@ -1,4 +1,7 @@
 # single_base
+
+[https://pub.dev/packages/single_base](https://pub.dev/packages/single_base)
+
 Platform agnostic bloc and storage interfaces for dart
 
 Provides interfaces for:
