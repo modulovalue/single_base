@@ -1,5 +1,5 @@
 # single_base
-Platform-agnostic bloc and storage interfaces for dart
+Platform agnostic bloc and storage interfaces for dart
 
 Provides interfaces for:
 - Disposable Blocs
