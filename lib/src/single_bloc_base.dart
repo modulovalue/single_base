@@ -53,6 +53,8 @@ class HookBloc implements BlocBase {
   Future<void> dispose() async {
     scheduleMicrotask(() async {
       await Future.forEach(onDispose, (Future<void> Function() a) => a());
+    });
+    scheduleMicrotask(() async {
       _context = null;
     });
   }
@@ -88,6 +90,10 @@ class BaggedInitializableBlocBase implements InitializableBlocBase {
 
   void disposeLater(void Function() dispose) {
     onDispose.add(() async => dispose());
+  }
+
+  void initLater(void Function() init) {
+    onInit.add(() async => init());
   }
 
   @override
