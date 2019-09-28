@@ -75,14 +75,12 @@ class BaggedInitializableBlocBase implements InitializableBlocBase {
 
   /// Disposes and initializes passed [InitializableBlocBase] objects
   /// together with this object.
-  @protected
   T bagState<T extends InitializableBlocBase>(T t) {
     onDispose.add(() => t.dispose());
     onInit.add(() => t.init());
     return t;
   }
 
-  @protected
   T bagBloc<T extends BlocBase>(T t) {
     onDispose.add(() => t.dispose());
     return t;
