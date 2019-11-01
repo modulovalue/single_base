@@ -1,6 +1,6 @@
 name: single_base
 description: Platform agnostic bloc and storage interfaces that don't depend on any framework.
-version: 1.0.1+2
+version: 1.0.1+4
 author: Modestas Valauskas <valauskasmodestas+dartpub@gmail.com>
 homepage: https://github.com/modulovalue/single_base
 repository: https://github.com/modulovalue/single_base

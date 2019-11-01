@@ -1,5 +1,7 @@
 # single_base
 
+DEPRECATED: please use [single_storage_base](https://github.com/modulovalue/single_storage_base) & [single_bloc_base](https://github.com/modulovalue/single_bloc_base)
+
 Platform agnostic bloc and storage interfaces for dart.
 
 Provides interfaces for:

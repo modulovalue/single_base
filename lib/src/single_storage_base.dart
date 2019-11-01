@@ -14,17 +14,17 @@ abstract class StorageBase<T> {
 
   Future<bool> exists(String key);
 
-  /// Returns the concrete key that will be used on [get], [set], [remove] and [exists].
-  /// Returns [key] when no decorators like with [map] have been applied to this storage.
+  /// Returns the concrete key that will be used on [get], [set], [remove]
+  /// and [exists].
   String location(String key);
 
-  /// Gives access to this storage at a specific key.
+  /// Gives access to this interface at a specific key.
   StorageBaseAt<T> at(String key) => _StorageBaseAtImpl(this, key);
 
   /// Maps this storage to a different location.
   ///
   /// Typically used to specify a more specific location for example by
-  /// prepending a specific domain/path. This maps all calls to the new
+  /// prepending a specific domain or path. This maps all calls to the new
   /// location.
   ///
   /// Example:

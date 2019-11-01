@@ -26,10 +26,6 @@ Future<void> main() async {
   await baggedBloc.init();
   await baggedBloc.dispose();
 
-  print("---------Storage---------");
-  final storage = MyStorage();
-  final storageAt = storage.at("somewhere");
-  final storageSomewhereElse = storage.map((key) => "somewhere/$key");
 }
 
 class ExampleBloc implements BlocBase {
@@ -77,32 +73,5 @@ class ExampleBaggedBloc extends BaggedInitializableBlocBase {
     initializableBlocs.forEach(bagState);
     disposeLater(() => print("dispose me later"));
     initLater(() => print("init me later"));
-  }
-}
-
-class MyStorage extends StorageBase<String> {
-  @override
-  Future<bool> exists(String key) async {
-    return false;
-  }
-
-  @override
-  Future<String> get(String key) async {
-    return "todo";
-  }
-
-  @override
-  String location(String key) {
-    return key;
-  }
-
-  @override
-  Future<void> remove(String key) async {
-    // remove
-  }
-
-  @override
-  Future<void> set(String key, String value) async {
-    // set
   }
 }
